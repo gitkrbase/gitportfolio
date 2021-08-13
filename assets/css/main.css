@@ -2926,7 +2926,7 @@ input, select, textarea {
 
 		.split > :nth-child(2n - 1) {
 			padding-right: 2.5em;
-			border-right: solid 1px rgba(255, 255, 255, 0.15);
+			/* border-right: solid 1px rgba(255, 255, 255, 0.15); */
 		}
 
 		.split > :nth-child(2n) {
@@ -3057,6 +3057,9 @@ input, select, textarea {
 			}
 
 		.spotlights > section > .content {
+			/* font-size: 1.9vmin; */
+			font-size: 1.8vh;
+
 			padding: 4em 5em 2em 5em ;
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3112,9 +3115,20 @@ input, select, textarea {
 
 			.spotlights > section > .content {
 				padding: 4em 4em 2em 4em ;
+				font-size: 1.5vh;
 			}
 
 		}
+
+		@media screen and (max-width: 1400px) {
+
+			.spotlights > section > .content {
+				/* padding: 4em 4em 2em 4em ; */
+				font-size: 1.3vh;
+			}
+
+		}
+
 
 		@media screen and (max-width: 980px) {
 
@@ -3129,6 +3143,7 @@ input, select, textarea {
 
 				.spotlights > section > .content {
 					width: 100%;
+					font-size: 1.7vh;
 				}
 
 				.spotlights > section.inactive > .content > .inner,
