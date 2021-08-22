@@ -123,7 +123,7 @@
 						<!-- <div class="inner"> -->
 						<h2>PROJECTS</h2>
 
-						<section>
+						<section id="sec2_1" style="visibility:hidden;opacity:0">
 							<!-- <a href="#" class="image"><img src="images/main1.jpg" alt="" data-position="center center" /></a> -->
 								<ul id="slider1"> 
 									<li>
@@ -163,7 +163,7 @@
 
 						</section>
 
-						<section style="margin-top: 20px;">
+						<section id="sec2_2" style="margin-top: 20px; visibility:hidden;opacity:0" >
 						<!-- <section> -->
 
 							<!-- <a href="#" class="image"><img src="images/main1.jpg" alt="" data-position="top center" /></a> -->
@@ -301,7 +301,9 @@
 				// slideMargin: 10,
 				// mode: 'fade',
 				// mode: 'horizontal',
-				captions: true
+				captions: true,
+				onSliderLoad: function(){ $("#sec2_1").css("visibility", "visible").animate({opacity:1}); }
+
 			});
 
 			$('#slider2').bxSlider({
@@ -316,7 +318,9 @@
 				// slideMargin: 10,
 				// mode: 'fade',
 				// mode: 'horizontal',
-				captions: true
+				captions: true,
+				onSliderLoad: function(){ $("#sec2_2").css("visibility", "visible").animate({opacity:1}); }
+
 			});
 
 
