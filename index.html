@@ -1,0 +1,712 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>길 문형 | Gil Munhyeong 👋</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d4be5219-b0ce-4d7d-8013-5cad37f44b31" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🧑‍💻</span></div><h1 class="page-title"><strong>길 문형 | Gil Munhyeong</strong> 👋</h1><p class="page-description"></p></header><div class="page-body"><div id="10eb97a8-5412-805c-a3eb-d826e817e97b" class="column-list"><div id="23691a44-d312-4839-bb23-80c2a712b543" style="width:31.25%" class="column"><figure id="10eb97a8-5412-80cf-9c0b-c644a5fc4316" class="image"><a href="1614233513517.jpg"><img style="width:192px" src="1614233513517.jpg"/></a></figure><p id="10eb97a8-5412-80d7-a5d2-dec848e3ee62" class="">
+</p><p id="10eb97a8-5412-8046-9b6f-e546687e42a6" class="">
+</p></div><div id="0fb41f90-7c90-4f96-aefe-acaaf74d8d94" style="width:68.75%" class="column"><h3 id="057d329e-46c2-4b7b-81d8-0892377a4b8e" class="">Contact.</h3><p id="5ced1013-4a2b-4154-81eb-fa9ccd8488c7" class="">📧 <mark class="highlight-default">ckrbase@gmail.com</mark></p><p id="ea7e0a10-8d00-4d91-9b68-e59fe0bc66bd" class="">🔗 linkedin.com/in/adalovelace</p><p id="7ebe0abf-cb73-43e8-898c-65af9aab0386" class="">👾 github.com/adalovelace</p><p id="10eb97a8-5412-8099-b7b3-d0635d740d0e" class="">
+</p></div></div><h2 id="2ce1be50-d41d-4822-90cf-d1f0a251db24" class="">🙋‍♂️ About me</h2><hr id="81519bb2-ee2c-4f60-98d4-f342549de82c"/><blockquote id="10eb97a8-5412-802b-9820-d20d939e5c62" class="">대용량 빅데이터를 처리하는 시스템의 개발과 운영을 담당했습니다. DRUID, HADOOP, KAFKA와 같은 오픈 소스 기반의 빅데이터 기술을 구축하고 활용해 웹 프로젝트를 운영한 경험이 있습니다. 이러한 경험을 통해 대용량 데이터의 효율적 처리를 위한 기술적 지식을 쌓을 수 있었습니다.<br/><br/>또한, 저는 여러 차례의 시스템 구축 관련 출장을 통해 다양한 환경과 요구 사항에 대응하는 문제 해결 능력을 크게 향상시켰습니다. 각기 다른 환경에서 발생하는 문제들을 신속하게 분석하고 해결하면서, 적응력과 기민한 문제 해결 능력을 키웠습니다. 이러한 경험들은 복잡한 문제 상황에서도 침착하게 대응할 수 있는 능력을 배양하는 데 큰 도움이 되었습니다.<br/><br/>평소에도 개인 프로젝트에 많은 관심을 가지고 다양한 개발 경험을 쌓고 있습니다. 끊임없이 배우고 성장하는 것을 목표로, 새로운 기술을 학습하고 실험하는 것을 즐깁니다. 스스로 문제를 해결하고 효율적인 방안을 모색하는 데 강점을 두고 있습니다.<br/></blockquote><p id="32181238-dffe-4ed2-b03d-dd2639fb34c0" class="">
+</p><p id="10cb97a8-5412-80b8-b26d-e6bd1f74bff7" class="">
+</p><div id="434b1a54-7b23-46d1-b727-43c2254fc245" class="collection-content"><h4 class="collection-title">⛏️ Experience</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>구분</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>많이 해봤어요</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>해본 적 있어요</th></tr></thead><tbody><tr id="f1c9f887-f57e-4af1-a51e-756817edcc2d"><td class="cell-title"><a href="https://www.notion.so/Language-f1c9f887f57e4af1a51e756817edcc2d?pvs=21">Language</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-orange">Java</span></td><td class="cell-yirl"><span class="selected-value select-value-color-blue">Python</span></td></tr><tr id="c27418c1-c207-453f-bff8-13f57d844b79"><td class="cell-title"><a href="https://www.notion.so/Data-c27418c1c207453fbff813f57d844b79?pvs=21">Data</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-blue">Druid</span><span class="selected-value select-value-color-yellow">Hadoop</span><span class="selected-value select-value-color-red">Kafka</span></td><td class="cell-yirl"></td></tr><tr id="6ff7ca9a-e0f1-43ae-b417-2251f6bc80c2"><td class="cell-title"><a href="https://www.notion.so/Backend-6ff7ca9ae0f143aeb4172251f6bc80c2?pvs=21">Backend</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-default">Mybatis</span><span class="selected-value select-value-color-green">Spring</span></td><td class="cell-yirl"></td></tr><tr id="5058f26a-db36-4d88-aba2-c646d34e9d96"><td class="cell-title"><a href="https://www.notion.so/Frontend-5058f26adb364d88aba2c646d34e9d96?pvs=21">Frontend</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-yellow">CSS</span><span class="selected-value select-value-color-purple">HTML</span><span class="selected-value select-value-color-pink">JavaScript</span></td><td class="cell-yirl"></td></tr><tr id="4dfb1913-f43f-4c7f-95ea-5921241764bd"><td class="cell-title"><a href="https://www.notion.so/Database-4dfb1913f43f4c7f95ea5921241764bd?pvs=21">Database</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-blue">MariaDB</span></td><td class="cell-yirl"><span class="selected-value select-value-color-yellow">Mysql</span><span class="selected-value select-value-color-red">Oracle</span></td></tr><tr id="25021716-38ec-4dd0-95ad-edaeb0a02a73"><td class="cell-title"><a href="https://www.notion.so/DevOps-2502171638ec4dd095adedaeb0a02a73?pvs=21">DevOps</a></td><td class="cell-mh;G"><span class="selected-value select-value-color-red">Linux</span><span class="selected-value select-value-color-yellow">SVN</span><span class="selected-value select-value-color-orange">Tomcat</span></td><td class="cell-yirl"><span class="selected-value select-value-color-pink">Docker</span><span class="selected-value select-value-color-brown">Git</span><span class="selected-value select-value-color-red">JBoss</span><span class="selected-value select-value-color-blue">Kubernetes</span></td></tr></tbody></table><br/><br/></div><h2 id="10eb97a8-5412-80ce-b597-d8aefc8aa262" class="">🏃‍♂️ Career</h2><hr id="10eb97a8-5412-80b1-8628-f19752a2346b"/><div id="10eb97a8-5412-807f-8c9d-d85b2b90f04e" class="column-list"><div id="fd36d1e8-2d77-4a6b-a281-e628ebdc652e" style="width:31.25%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="f5f36afb-fcb2-4398-946c-9e685887e868"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/briefcase_gray.svg"/></div><div style="width:100%"><strong>빅데이터 웹 개발자<br/><br/></strong><mark class="highlight-gray">| 오션정보기술</mark></div></figure><p id="2beb185f-a2b4-4df5-9c88-8d0c004f54e6" class="">
+</p></div><div id="94396ea9-1095-478d-8759-def46b0f6473" style="width:68.75%" class="column"><blockquote id="a9c4af60-42ff-4566-b4a7-1bdb4d61cfdc" class="">대전광역시 <mark class="highlight-gray">∙</mark><mark class="highlight-gray"><strong> </strong></mark><mark class="highlight-gray">2021.12 - 2024.6</mark></blockquote><hr id="9216a81c-6799-4e38-b8b1-b4294726c4f0"/><ul id="27410824-0b9e-4bf9-b059-3f5cd6bd38d0" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">지능형 디지털발전소 플랫폼(IDPP 플랫폼)</mark></li></ul><ul id="45c5dff8-f751-4e53-b2ac-abcfb0a059e2" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">빅데이터 플랫폼 웹 포털의 전반적인 개발 및 유지보수</mark></li></ul><hr id="aa979c52-3c4f-4ad8-a392-74f9e1a6f2ce"/></div></div><div id="10eb97a8-5412-80a7-8223-d28bd009d82d" class="column-list"><div id="1386af8b-c84b-4faf-bf92-66f91c71c255" style="width:31.25%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="82e572af-bcb9-48fe-b521-36c0761934fb"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/briefcase_gray.svg"/></div><div style="width:100%"><mark class="highlight-default"><strong>경험/교육</strong></mark><mark class="highlight-gray"><br/>| 넥스트IT 교육센터<br/></mark></div></figure><p id="10eb97a8-5412-80cc-870b-f68505d6c382" class="">
+</p></div><div id="d580971a-e84d-439b-a642-0da05dba2055" style="width:68.75%" class="column"><blockquote id="e33b831a-b9bf-4443-9480-51da30b73a9e" class="">대전광역시 <mark class="highlight-gray">∙ 2018.10 - 2019.04</mark></blockquote><hr id="07fd2434-936f-469d-8f31-5c8263ab735e"/><ul id="78bb0a3b-cfc0-408a-a80d-d0aac3547878" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">머신러닝 활용 JAVA 웹 응용 SW 엔지니어 양성과정</mark></li></ul><ul id="bf5b93d7-69c1-4662-8ec5-fb3ce03b3513" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-gray">팀 프로젝트</mark></li></ul><hr id="6a103ce2-df4b-4305-8d85-b4f8b5d3cd2a"/><p id="10eb97a8-5412-80c4-92be-c73c67b01ff2" class="">
+</p></div></div><p id="10eb97a8-5412-80ab-8188-e7db887d6207" class="">
+</p><h2 id="2ed66229-0ccc-4a6a-be6d-34fbe0d5b194" class="">📝 Projects</h2><hr id="10eb97a8-5412-8014-b9ee-f588701861ae"/><h2 id="10cb97a8-5412-800c-b6ec-fd4f2a050401" class="">지능형 디지털 발전소 플랫폼</h2><p id="10eb97a8-5412-80f7-8187-c68fca1e689c" class=""><mark class="highlight-gray">(2021.12 - 2024.6)</mark></p><p id="10eb97a8-5412-800d-9415-e3bb3fd5f8bb" class="">
+</p><h3 id="10cb97a8-5412-80a0-bc25-efff8ff37fea" class="">🎯 프로젝트의 배경 및 목표</h3><ul id="10db97a8-5412-8097-bef8-d6d99df46fd2" class="bulleted-list"><li style="list-style-type:disc">한국 발전소 센서 데이터 활용</li></ul><ul id="10db97a8-5412-808c-929f-e2ade536e8a3" class="bulleted-list"><li style="list-style-type:disc">기존 발전사 RTDB의 센서 데이터 활용 어려움을 해결하기 위한 고속처리 기술 연구 및 개발</li></ul><ul id="10db97a8-5412-80a4-b0e3-d47a2bfc9d18" class="bulleted-list"><li style="list-style-type:disc">초대용량 발전 센서 데이터를 안정적으로 수집하여 성능 저하나 장애 없이 실시간 및 이력 데이터를 확보하고, 이를 기반으로 발전소의 유연한 운전을 지원하는 APP 개발에 활용</li></ul><p id="10db97a8-5412-800d-9b8e-e37e17812b6c" class="">
+</p><h3 id="10cb97a8-5412-8018-97f9-e30e71169e61" class="">📋 수행 업무</h3><ul id="10db97a8-5412-806f-a304-c57412a6cb41" class="bulleted-list"><li style="list-style-type:disc">클러스터 구성 및 운영<ul id="10eb97a8-5412-80b9-860d-ed52b32e97b1" class="bulleted-list"><li style="list-style-type:circle">Druid, Hadoop, Kafka 등 오픈소스를 활용한 빅데이터 플랫폼 연구 및 개발</li></ul><ul id="10eb97a8-5412-80ee-8090-e01fbb9ef65e" class="bulleted-list"><li style="list-style-type:circle">한국 5개 발전사에 빅데이터 플랫폼을 각각 설치하고, 클러스터 구성 및 분리 작업을 수행하며 서비스 운영</li></ul></li></ul><ul id="10db97a8-5412-8050-8752-ffc80059af18" class="bulleted-list"><li style="list-style-type:disc">데이터 수집, 표준화, 분산 저장 및 압축, 데이터 품질관리, APP 연계 등 전체 기능을 하나의 화면으로 확인할 수 있는 통합 대시보드 구현 </li></ul><ul id="10db97a8-5412-80a6-bc36-ff9160e6b10f" class="bulleted-list"><li style="list-style-type:disc">수집한 센서 데이터를 활용하여 실시간 및 이력 데이터를 Chart.js를 통해 동적 차트로 구현</li></ul><ul id="10db97a8-5412-8034-a1c5-c6d70eab1aa8" class="bulleted-list"><li style="list-style-type:disc">모니터링 시스템 구현<ul id="10eb97a8-5412-8044-a7b6-e4ae22ab5b24" class="bulleted-list"><li style="list-style-type:circle">클러스터의 각 서버에 Spring Boot로 제작된 모듈을 배포하여, 일정 주기로 서버 자원을 수집하고 Kafka 토픽으로 전송</li></ul><ul id="10eb97a8-5412-80ef-b4d0-e343d10465de" class="bulleted-list"><li style="list-style-type:circle">웹 화면을 통해 서비스 중인 프로세스의 자원 사용률을 모니터링하고, 마우스 오버 시 프로세스 로그를 확인하거나 다운로드할 수 있는 기능 구현</li></ul><ul id="10eb97a8-5412-8046-b86a-d8c867803425" class="bulleted-list"><li style="list-style-type:circle">데이터베이스 자원 사용률 및 트랜잭션 상태 모니터링</li></ul></li></ul><ul id="10eb97a8-5412-8043-9db1-f07f8e2555c3" class="bulleted-list"><li style="list-style-type:disc">REST API 데이터 적재 성능 최적화</li></ul><ul id="10eb97a8-5412-80e5-a4c9-ece245bec598" class="bulleted-list"><li style="list-style-type:disc">빅데이터 플랫폼 웹 포털의 전반적인 개발 및 유지보수 수행</li></ul><p id="10eb97a8-5412-8039-9516-c3633fcaa9e6" class="">
+</p><p id="10eb97a8-5412-80da-a56f-d25aef1fdbbf" class="">
+</p><h2 id="10eb97a8-5412-80d5-9226-cf973d56380d" class="">🏅 Certifications</h2><hr id="10eb97a8-5412-8080-82b9-de6f6588e241"/><ul id="10eb97a8-5412-80ec-ad72-d615a82e6676" class="bulleted-list"><li style="list-style-type:disc">정보처리기사 (2024.06)<ul id="e21bf570-3995-4e0e-96dc-cd17b458e3a9" class="bulleted-list"><li style="list-style-type:circle">한국산업인력공단</li></ul><p id="cc40ad79-282f-4261-bb56-9c56909544d7" class="">
+</p></li></ul><ul id="10eb97a8-5412-80c0-9806-d583cab08371" class="bulleted-list"><li style="list-style-type:disc">정보보안산업기사 (2020.07)<ul id="f993934c-10e3-4f30-991c-c6710f20da5a" class="bulleted-list"><li style="list-style-type:circle">한국인터넷진흥원</li></ul></li></ul><p id="10eb97a8-5412-808a-b961-f164a2e27e7f" class="">
+</p><h2 id="111b97a8-5412-8072-9427-f1c797cea255" class="">🇰🇷 Military</h2><hr id="111b97a8-5412-803e-bbf7-ef9f797b74fd"/><ul id="111b97a8-5412-8034-b716-fe72643185c2" class="bulleted-list"><li style="list-style-type:disc">2016.11 - 2018.7 : 육군 병장 만기 전역</li></ul><p id="111b97a8-5412-80d7-b038-d2d0b462dd58" class="">
+</p><p id="111b97a8-5412-80d0-9d88-d0ec22455098" class="">
+</p><h2 id="10eb97a8-5412-805b-b26e-e833a548e04d" class="">📖 Educations</h2><hr id="10eb97a8-5412-8065-805a-c64c392dee76"/><ul id="10eb97a8-5412-807a-8529-db58fac61647" class="bulleted-list"><li style="list-style-type:disc">Hankuk Univ. Software<ul id="04d3debf-f618-43d2-84a7-fbfcadac8287" class="bulleted-list"><li style="list-style-type:circle">2019.03 ~ 2024.02. (Graduated)</li></ul></li></ul><p id="10eb97a8-5412-801e-9676-c54d7ef419b6" class="">
+</p><p id="112b97a8-5412-80c9-a93e-c4fb54f69b73" class="">
+</p><p id="112b97a8-5412-8070-9867-c73f650fadf3" class="">
+</p><p id="112b97a8-5412-8076-a356-ed5f303a3b3c" class="">
+</p><p id="112b97a8-5412-80a8-a55e-d398c9ef1daa" class="">
+</p><p id="112b97a8-5412-80e7-a2b0-e8863ba36f15" class="">
+</p><p id="10eb97a8-5412-80ff-8c88-c6d7fa6e91e1" class="">
+</p><p id="10db97a8-5412-80b1-ac28-d0c4c400fe4f" class="">
+</p><p id="e1518c7e-42df-4124-bd8f-49c25683e860" class="">
+</p><p id="10cb97a8-5412-807b-81a4-d2cd8a133849" class="">
+</p><p id="1e910a85-787d-44c7-9dcc-358ddee79d9d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
